@@ -1,0 +1,24 @@
+public class URLFixer {
+    public static void main(String... args){
+        String url = "https//www.reddit.com/r/nevertellmethebots";
+
+        // Accidentally I got the wrong URL for a funny subreddit. It's probably "odds" and not "bots"
+        // Also, the URL is missing a crutial component, find out what it is and insert it too!
+        // Try to solve it more than once using different String functions!
+
+        //String urlfixed1 = url.replace("https", "https:");
+        //String urlfixed2 = urlfixed1.replace("nevertellmethebots", "nevertellmetheodds");
+        //System.out.println(urlfixed2);
+
+        url = url.substring(0,5)+ ":" + url.substring(5,38)+ "odds";
+        System.out.println(url);
+
+
+
+
+
+
+        //System.out.println(url.replace("https//www.reddit.com/r/nevertellmethebots",
+                //"https://www.reddit.com/r/nevertellmetheodds"));
+    }
+}
