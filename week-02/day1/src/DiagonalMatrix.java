@@ -1,6 +1,6 @@
 public class DiagonalMatrix {
     public static void main(String[] args) {
-        int[][] matrix = new int[10][10];
+        int[][] matrix = new int[5][5];
 
         for (int i = 0; i < matrix.length ; i++) {
             System.out.println("");
