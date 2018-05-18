@@ -3,22 +3,10 @@ import javax.swing.*;
 import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
-public class StarryNight {
+
+public class LinePlay {
     public static void mainDraw(Graphics graphics) {
-        // Draw the night sky:
-        //  - The background should be black
-        //  - The stars can be small squares
-        //  - The stars should have random positions on the canvas
-        //  - The stars should have random color (some shade of grey)
-        graphics.fillRect(0,0,320,320);
-        for (int i = 0; i < 500; i++) {
-                graphics.setColor(Color.yellow);
-                graphics.fillRect((int) (Math.random() *320),(int) (Math.random() *320),(int) (Math.random() *2),(int) (Math.random() *2));
-        }
-
-
-
-
+        
     }
 
     // Don't touch the code below
