@@ -14,6 +14,8 @@ public class LinePlay {
         for (int i = 0; i < WIDTH / lineNumber ; i++) {
             graphics.setColor(Color.green);
             graphics.drawLine(i * lineNumber, 0, WIDTH, i*lineNumber );
+            graphics.setColor(Color.red);
+            graphics.drawLine(0, i * lineNumber, i*lineNumber,HEIGHT  );
         }
 
 
