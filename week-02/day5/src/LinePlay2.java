@@ -4,27 +4,19 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class LinePlay {
+public class LinePlay2 {
     public static void mainDraw(Graphics graphics) {
-        int lineNumber = 20;
-        int pattern = 20;
-        lineDraw(lineNumber, graphics);
-        patternDrawer(pattern, graphics);
+        int lineNumb = 15;
+        linedraw(lineNumb, graphics);
+
+    }
+    public static void linedraw(int lineNumb, Graphics graphics){
+        for (int i = 0; i < WIDTH /lineNumb; i++) {
+            graphics.setColor(Color.green);
+            graphics.drawLine(i*lineNumb,0,WIDTH,i*lineNumb);
+        }
     }
 
-    public static void lineDraw (int lineNumber, Graphics graphics){
-        for (int i = 0; i < WIDTH / lineNumber ; i++) {
-            graphics.setColor(Color.green);
-            graphics.drawLine(i * lineNumber, 0, WIDTH, i*lineNumber );
-            graphics.setColor(Color.red);
-            graphics.drawLine(0, i * lineNumber, i*lineNumber,HEIGHT  );
-        }
-    }
-    public static void patternDrawer(int pattern, Graphics graphics){
-        for (int i = 0; i < pattern ; i++) {
-            graphics.drawRect(i + pattern, i + pattern,50,50);
-        }
-    }
     // Don't touch the code below
     static int WIDTH = 320;
     static int HEIGHT = 343;
