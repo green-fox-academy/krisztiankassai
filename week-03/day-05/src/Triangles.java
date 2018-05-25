@@ -6,12 +6,20 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Triangles {
     public static void mainDraw(Graphics graphics) {
-        int pyramidamount = 5;
-        int[] x = {0, WIDTH, WIDTH / 2};
-        int[] y = {0, 0, HEIGHT};
-        graphics.drawPolygon(x, y, 3);
+       // int[] x = {0, 0, WIDTH / 2};
+       // int[] y = {0,WIDTH,  }
+       // int npoints = 3;
+        pyramiddrawer(graphics, 5,5,300);
+
+
     }
-    
+    public static void pyramiddrawer(Graphics graphics, int x, int y, int size){
+        int[] xx = {x, x + size, x + size / 2};
+        int[] yy = {y, y, (int) (Math.sqrt(3)) / 2 * size};
+        int n = 3;
+        graphics.drawPolygon(xx,yy,n);
+    }
+
     static int WIDTH = 320;
     static int HEIGHT = 343;
 
