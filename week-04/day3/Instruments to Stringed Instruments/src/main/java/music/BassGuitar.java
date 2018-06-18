@@ -13,5 +13,4 @@ public class BassGuitar extends StringedInstrument {
   public String sound(){
     return"Duum-duum-duum";
   }
-
 }
