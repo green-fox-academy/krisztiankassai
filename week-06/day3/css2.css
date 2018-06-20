@@ -1,0 +1,39 @@
+body{
+    font-family: monospace;
+}
+
+input, label {
+    display:block;
+    padding-bottom: 10px;
+    font-family: monospace;
+}
+input[type = button]{
+    background-color: black; 
+    font-family: monospace;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 20px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+input:focus {
+    outline: none !important;
+    border:1px solid green;
+    box-shadow: 0 0 10px #719ECE;
+}
+input[type = text]{
+    height: 30px;
+    width: 300px;
+}
+input[type = password]{
+    height: 30px;
+    width: 300px;
+}
+a{
+    padding-left: 190px;
+    font-family: monospace;
+}
+
