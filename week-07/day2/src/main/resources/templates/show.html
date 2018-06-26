@@ -6,7 +6,7 @@
 </head>
 <body>
      <h1>Bank accounts of Pride Rock</h1>
-     <table>
+     <table border="1">
          <tr>
              <th>Name</th>
              <th>Balance</th>
@@ -14,7 +14,7 @@
          </tr>
          <tr>
              <td th:text="${animal.name}"></td>
-             <td th:text="${animal.balance}"></td>
+             <td th:text="${animal.balance} + '0 Zebra'"></td>
              <td th:text="${animal.animaltype}"></td>
          </tr>
      </table>

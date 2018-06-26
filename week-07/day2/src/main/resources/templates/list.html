@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Bank accounts of Pride Rock</h1>
+<div th:if="${#lists.isEmpty(accounts)}">
+    <p>No accounts in the list</p>
+</div>
+<div>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Animaltype</th>
+            <th>Index</th>
+            <th>Royal Status</th>
+            <th>Moral State</th>
+        </tr>
+        <tr th:unless="${#lists.isEmpty(accounts)}" th:each="account : ${accounts}">
+            <td th:text="${account.name}"></td>
+            <td th:text="${account.balance} + '0 Zebra'"></td>
+            <td th:text="${account.animaltype}"></td>
+            <td th:text="${accountStat.index}"></td>
+            <td th:if="${account.isKing()==true}" th:style="background-color + ':' + 'gold'" th:text="${King}"></td>
+            <td th:unless="${account.isKing()==true}" th:style="background-color + ':' + 'white'" th:text="${notKing}"></td>
+            <td th:if="${account.isGood()==true}"  th:text="${isGood}"></td>
+            <td th:unless="${account.isGood()==true}"  th:text="${notGood}"></td>
+            <td>
+                <form action="#" th:action="@{list}" method="post" th:object="${account}">
+                    <input type="text" name>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

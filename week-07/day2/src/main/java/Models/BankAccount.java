@@ -3,17 +3,22 @@ package Models;
 public class BankAccount {
 
   private String name;
-  private long balance;
+  private double balance;
   private String animaltype;
+  private boolean isKing;
+  private boolean isGood;
 
-  public BankAccount(String name, long balance, String animaltype) {
+  public BankAccount(String name, double balance, String animaltype, boolean isKing, boolean isGood) {
     this.name = name;
     this.balance = balance;
     this.animaltype = animaltype;
+    this.isKing = isKing;
+    this.isGood = isGood;
   }
 
   public BankAccount() {
   }
+
 
   public String getName() {
     return name;
@@ -23,11 +28,11 @@ public class BankAccount {
     this.name = name;
   }
 
-  public long getBalance() {
+  public double getBalance() {
     return balance;
   }
 
-  public void setBalance(long balance) {
+  public void setBalance(double balance) {
     this.balance = balance;
   }
 
@@ -37,5 +42,21 @@ public class BankAccount {
 
   public void setAnimaltype(String animaltype) {
     this.animaltype = animaltype;
+  }
+
+  public boolean isKing() {
+    return isKing;
+  }
+
+  public void setKing(boolean king) {
+    isKing = king;
+  }
+
+  public boolean isGood() {
+    return isGood;
+  }
+
+  public void setGood(boolean good) {
+    isGood = good;
   }
 }

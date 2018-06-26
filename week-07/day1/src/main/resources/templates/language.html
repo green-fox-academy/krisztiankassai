@@ -6,5 +6,6 @@
 </head>
 <body th:style="font-size + ':' + ${size} + 'px;' ">
 <p  th:style="color + ':' + 'rgb' + '(' + ${rgbR} + ',' + ${rgbG} + ',' + ${rgbB} + ')' " th:text="${language}"/>
+th:if="${account.isKing()== true}" th:style="background-color + ':' + 'gold'"
 </body>
 </html>
