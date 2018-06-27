@@ -27,10 +27,23 @@
             <td th:unless="${account.isKing()==true}" th:style="background-color + ':' + 'white'" th:text="${notKing}"></td>
             <td th:if="${account.isGood()==true}"  th:text="${isGood}"></td>
             <td th:unless="${account.isGood()==true}"  th:text="${notGood}"></td>
+        </tr>
+        <tr>
             <td>
-                <form action="#" th:action="@{list}" method="post" th:object="${account}">
-                    <input type="text" name>
-            </td>
+                <form action="#" th:action="@{/list}" method="post" th:object="account">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" th:field="*{account.name}"/>
+                    <label for="balance">Balance:</label>
+                    <input type="number" id="balance" name="balance" th:field="*{account.balance}"/>
+                    <label for="animaltype">Animal Type:</label>
+                    <input type="text" id="animaltype" name="name" th:field="*{account.animaltype}"/>
+                    <label for="isKing">Is King?:</label>
+                    <input type="checkbox" id="isKing" name="isKing" th:field="*{account.isKing()}"/>
+                    <label for="isGood">Is Good?:</label>
+                    <input type="checkbox" id="isGood" name="name" th:field="*{account.isGood()}"/>
+                    <input type="submit" value="List"/>
+                    </form>
+             </td>
         </tr>
     </table>
 </div>

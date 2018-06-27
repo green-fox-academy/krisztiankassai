@@ -4,6 +4,8 @@ import Models.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import sun.security.provider.NativePRNG;
 
@@ -42,6 +44,11 @@ public class MainController {
   model.addAttribute("notGood", "Bad Guy");
   return "list";
 }
+  @PostMapping("list")
+  public String register(@ModelAttribute BankAccount account) {
+    accounts.add(account);
+    return "list";
+  }
  public void raise(BankAccount bankAccount){
   if (bankAccount.isKing()){
     bankAccount.setBalance(bankAccount.getBalance() + 100);
