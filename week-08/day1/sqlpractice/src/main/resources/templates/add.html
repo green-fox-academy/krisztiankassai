@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<form action="#" th:action="@{/list}" method="get">
+<form action="#" th:action="@{/add}" th:object="${newTodo}" method="post">
     <label for="addTodo" >Todo:</label>
-    <input type="text" id="addTodo" name="addTodo">
+    <input type="text" id="addTodo" th:field="*{title}">
     <input type="submit" value="Add">
 </form>
 

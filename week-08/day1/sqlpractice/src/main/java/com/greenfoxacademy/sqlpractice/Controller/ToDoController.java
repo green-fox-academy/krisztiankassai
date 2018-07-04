@@ -20,20 +20,20 @@ public class ToDoController {
   }
 
   @GetMapping(value = {"", "/list"})
-  public String list(Model model, @RequestParam(name = "isActive", required = false) String isActive,
-                     @RequestParam(name = "todo", required = false) String todo){
+  public String list(Model model, @RequestParam(name = "isActive", required = false) String isActive){
     model.addAttribute("istrue", isActive);
-    model.addAttribute("todo", repository.findAll());
+    model.addAttribute("todos", repository.findAll());
     return "list";
   }
   @GetMapping("add")
-  public String addToDoRender(){
-    return "redirect: list/add";
+  public String addToDoRender(Model model){
+    model.addAttribute("newTodo", new Todo());
+    return "add";
   }
 
   @PostMapping("add")
-  public String addToDo(@RequestParam(name = "add")String add, Model model){
-    model.addAttribute("addTodo", repository.save(new Todo(add)));
-    return "/list";
+  public String addToDo(@ModelAttribute Todo todo){
+    repository.save(todo);
+    return "redirect:/list";
   }
 }
