@@ -1,5 +1,6 @@
 package com.greenfoxacademy.programmerfoxclub.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Skeleton {
