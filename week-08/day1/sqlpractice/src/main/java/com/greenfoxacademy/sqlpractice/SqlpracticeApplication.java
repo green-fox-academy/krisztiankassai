@@ -12,7 +12,7 @@ public class SqlpracticeApplication implements CommandLineRunner {
 
   @Autowired
   Repository repository;
-
+  
   public static void main(String[] args) {
     SpringApplication.run(SqlpracticeApplication.class, args);
 
