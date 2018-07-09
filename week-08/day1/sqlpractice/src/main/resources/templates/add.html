@@ -6,9 +6,11 @@
 </head>
 <body>
 
-<form action="#" th:action="@{/add}" th:object="${newTodo}" method="post">
+<form action="#" th:action="@{/add}" th:object="${newTodo}"  method="post">
     <label for="addTodo" >Todo:</label>
-    <input type="text" id="addTodo" th:field="*{title}">
+    <input type="text" id="addTodo" th:field="*{title}"><br>
+   <!-- <label for="addAssignee" >Assignee:</label>
+    <input type="text" id="addAssignee" th:field="*{assignee}"><br>-->
     <input type="submit" value="Add">
 </form>
 
